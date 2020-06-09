@@ -44,6 +44,7 @@ public class App {
 		SeerJSON objectInArray = JSONObject.$(0).$(0);
 		System.out.println(objectInArray.$("value1").getType());
 		System.out.println(objectInArray.$("value1"));
+		System.out.println(objectInArray.$("value2"));
 		System.out.println();
 
 		objectInArray = JSONObject.$(0).$(1);
@@ -64,21 +65,6 @@ public class App {
 		System.out.println(objectInArray.$("value2"));
 		System.out.println();
 
-
-		// JSONObject.printObject(); //Printing origional JSON Object
-		// System.out.println();
-
-		// System.out.println(JSONObject.$(5).$("friends").$(2).$("id")); //Print out the value when used in a Print
-		// System.out.println(JSONObject.$(5).$("friends").$(2).$("id").getType()); //(This is going to be an int type in the form of an ESeerType Enumerator)
-
-		// System.out.println(JSONObject.$(5).$("about").<String>$()); //Get the actual return value from the object.
-
-		// String gettingString = JSONObject.$(5).$("about").$(); //Will actual cast if the right type (Will give an error if they are different unfortunately)
-		// System.out.println(gettingString);
-
-		// JSONObject.$(5).$("greeting").printObject();  //This will print out the object in its actual form. Example strings will be printed with ""
-		// System.out.println(JSONObject.$(5).$("greeting").getType()); //Get the ESeerType for the underlying value. (This is going to be a string as shown above.)
-		
 
     }
 }
