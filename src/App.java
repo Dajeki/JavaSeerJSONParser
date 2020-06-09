@@ -17,9 +17,10 @@ public class App {
 		
 		while (true) {
 			try { 
-				JSONFileAsString = Files.readString(fileName);
 
+				JSONFileAsString = Files.readString(fileName);
 				break;
+				
 			}
 			catch (IOException Exception) {
 				
