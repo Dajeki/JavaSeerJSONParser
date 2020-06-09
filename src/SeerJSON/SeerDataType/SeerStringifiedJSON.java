@@ -69,7 +69,7 @@ public class SeerStringifiedJSON {
                 Checks to make sure not first element for index out of bounds then can continue to check that string is '{' and that the value before is '['
                 We do this so that brackets after '[' will be on a new line and will have to have tabs before the output.
               */
-            if (regexIter - 1 >= 0 && stringInformation.equals("{") && regexArray.get(regexIter - 1).equals("[") ){
+            if (regexIter - 1 >= 0 && (stringInformation.equals("{")|stringInformation.equals("[")) && regexArray.get(regexIter - 1).equals("[") ){
                 
                 printTabs(bracketCount);
                 System.out.println(stringInformation);
@@ -81,7 +81,7 @@ public class SeerStringifiedJSON {
                 Normal '{' will be put on a new line however it will not include the tabls because the ',' value is the one creating the newline. 
                 This makes sure the tabs are in the right spot.
               */
-            else if (regexIter - 1 >= 0 && stringInformation.equals("{") && regexArray.get(regexIter - 1).equals(",") ){
+            else if (regexIter - 1 >= 0 && (stringInformation.equals("{")|stringInformation.equals("[")) && regexArray.get(regexIter - 1).equals(",") ){
                 
                 printTabs(bracketCount);
                 System.out.println(stringInformation);

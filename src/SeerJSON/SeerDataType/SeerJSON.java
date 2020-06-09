@@ -124,7 +124,7 @@ public class SeerJSON {
         }
     }
 
-    public String getContainerString( ArrayList<String> ArrayListToCheck ) {
+    protected String getContainerString( ArrayList<String> ArrayListToCheck ) {
 
         int bracketDepth = 0;
         String strReturn = "";
@@ -155,7 +155,7 @@ public class SeerJSON {
         return strReturn;
     }
 
-    private ESeerType determineType(String stringChecking) {
+    protected ESeerType determineType(String stringChecking) {
 
         stringChecking = stringChecking.toLowerCase();
 
@@ -176,7 +176,7 @@ public class SeerJSON {
         }
     }
 
-    private String interpretEscapeCharacters(String stringToChange) {
+    protected String interpretEscapeCharacters(String stringToChange) {
         stringToChange = stringToChange.replace("\\r", "\r");
         stringToChange = stringToChange.replace("\\n", "\n");
         return stringToChange;

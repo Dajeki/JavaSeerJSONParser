@@ -25,7 +25,7 @@ public class App {
 			catch (IOException Exception) {
 				
 				System.out.println("Could not find file " + JSONFileAsString);
-				System.out.println("Please enter new file path to a JSON file.");
+				System.out.println("Please enter new file path to a .JSON file.");
 
 				fileName = Path.of(systemInScanner.nextLine().replace("\n",""));
 	
@@ -36,19 +36,49 @@ public class App {
 		SeerStringifiedJSON JSONString = new SeerStringifiedJSON(JSONFileAsString); //Create a stringified JSON to create the object. !STILL NEED TO ADD CHECKING
 		SeerJSON JSONObject = JSONString.getJSON(); //Get the actual json object from the StringifiedJSON
 
-		JSONObject.printObject(); //Printing origional JSON Object
+		System.out.println(JSONObject.getType());
+		System.out.println(JSONObject);
+		JSONObject.printObject();
 		System.out.println();
 
-		System.out.println(JSONObject.$(5).$("friends").$(2).$("id")); //Print out the value when used in a Print
-		System.out.println(JSONObject.$(5).$("friends").$(2).$("id").getType()); //(This is going to be an int type in the form of an ESeerType Enumerator)
+		SeerJSON objectInArray = JSONObject.$(0).$(0);
+		System.out.println(objectInArray.$("value1").getType());
+		System.out.println(objectInArray.$("value1"));
+		System.out.println();
 
-		System.out.println(JSONObject.$(5).$("about").<String>$()); //Get the actual return value from the object.
+		objectInArray = JSONObject.$(0).$(1);
+		System.out.println(objectInArray.$("value1").getType());
+		System.out.println(objectInArray.$("value1"));
+		System.out.println(objectInArray.$("value2"));
+		System.out.println();
 
-		String gettingString = JSONObject.$(5).$("about").$(); //Will actual cast if the right type (Will give an error if they are different unfortunately)
-		System.out.println(gettingString);
+		objectInArray = JSONObject.$(1).$(0);
+		System.out.println(objectInArray.$("value1").getType());
+		System.out.println(objectInArray.$("value1"));
+		System.out.println(objectInArray.$("value2"));
+		System.out.println();
 
-		JSONObject.$(5).$("greeting").printObject();  //This will print out the object in its actual form. Example strings will be printed with ""
-		System.out.println(JSONObject.$(5).$("greeting").getType()); //Get the ESeerType for the underlying value. (This is going to be a string as shown above.)
+		objectInArray = JSONObject.$(1).$(1);
+		System.out.println(objectInArray.$("value1").getType());
+		System.out.println(objectInArray.$("value1"));
+		System.out.println(objectInArray.$("value2"));
+		System.out.println();
+
+
+		// JSONObject.printObject(); //Printing origional JSON Object
+		// System.out.println();
+
+		// System.out.println(JSONObject.$(5).$("friends").$(2).$("id")); //Print out the value when used in a Print
+		// System.out.println(JSONObject.$(5).$("friends").$(2).$("id").getType()); //(This is going to be an int type in the form of an ESeerType Enumerator)
+
+		// System.out.println(JSONObject.$(5).$("about").<String>$()); //Get the actual return value from the object.
+
+		// String gettingString = JSONObject.$(5).$("about").$(); //Will actual cast if the right type (Will give an error if they are different unfortunately)
+		// System.out.println(gettingString);
+
+		// JSONObject.$(5).$("greeting").printObject();  //This will print out the object in its actual form. Example strings will be printed with ""
+		// System.out.println(JSONObject.$(5).$("greeting").getType()); //Get the ESeerType for the underlying value. (This is going to be a string as shown above.)
 		
+
     }
 }
