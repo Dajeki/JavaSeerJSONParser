@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/15Y5iD6.png" title="Click for the larger version." alt="Program Output"/>
+<img src="https://i.imgur.com/Zu0D7vr.png" title="Click for the larger version." alt="Program Output"/>
 
 ```java
 SeerStringifiedJSON JSONString =  new  SeerStringifiedJSON(string);  //Create a stringified JSON to create the object. !STILL NEED TO ADD CHECKING
