@@ -22,20 +22,21 @@ public class SeerJSON {
         this.objectCreator = creator;
 
         if ( valueType == ESeerType.OBJECT ) {
+
             JSONHashMap = new HashMap<String, SeerJSON>();
             JSONHashMap.put("0", this);
             setupObject(creator.getSeperatedJSON());
+
         }
         else if ( valueType == ESeerType.ARRAY ) {
+
             JSONHashMap = new HashMap<String, SeerJSON>();
             setupArray(creator.getSeperatedJSON());
+
         } 
     }
 
     protected void setupObject ( ArrayList<String> JSONStringArray ) {
-
-        //*Debugging Output - Uncomment to whatch program run.
-        // System.out.println("Printing out Object");
 
         String stringBefore = "";
         String stringInformation = "";
