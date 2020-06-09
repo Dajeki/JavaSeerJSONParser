@@ -20,7 +20,7 @@ public class App {
 
 				JSONFileAsString = Files.readString(fileName);
 				break;
-				
+
 			}
 			catch (IOException Exception) {
 				
@@ -33,20 +33,17 @@ public class App {
 		}
 		systemInScanner.close();
         
-        
+		SeerStringifiedJSON JSONString = new SeerStringifiedJSON(JSONFileAsString); //Create a stringified JSON to create the object. !STILL NEED TO ADD CHECKING
+		SeerJSON JSONObject = JSONString.getJSON(); //Get the actual json object from the StringifiedJSON
 
-        
-        SeerStringifiedJSON JSONString = new SeerStringifiedJSON(JSONFileAsString); //Create a stringified JSON to create the object. !STILL NEED TO ADD CHECKING
-        SeerJSON JSONObject = JSONString.getJSON(); //Get the actual json object from the StringifiedJSON
-
-        JSONObject.printObject(); //Printing origional JSON Object
+		JSONObject.printObject(); //Printing origional JSON Object
 		System.out.println();
-		
+
 		System.out.println(JSONObject.$(5).$("friends").$(2).$("id")); //Print out the value when used in a Print
 		System.out.println(JSONObject.$(5).$("friends").$(2).$("id").getType()); //(This is going to be an int type in the form of an ESeerType Enumerator)
 
 		System.out.println(JSONObject.$(5).$("about").<String>$()); //Get the actual return value from the object.
-		
+
 		String gettingString = JSONObject.$(5).$("about").$(); //Will actual cast if the right type (Will give an error if they are different unfortunately)
 		System.out.println(gettingString);
 
