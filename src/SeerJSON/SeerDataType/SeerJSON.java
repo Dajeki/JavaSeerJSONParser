@@ -3,9 +3,7 @@ package SeerJSON.SeerDataType;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- * Wrapper class for easy naming on objects for getting values
- */
+
 public class SeerJSON {
 
     protected SeerStringifiedJSON objectCreator;
@@ -46,52 +44,36 @@ public class SeerJSON {
         
         for ( int listIndex = 1; listIndex < JSONStringArray.size() - 1; ++listIndex ) { //-1 to account for last bracket
 
-            //Must have a selection each time so we can skip past Object and Array blocks.
             stringBefore = JSONStringArray.get(listIndex - 1);
             stringInformation = JSONStringArray.get(listIndex);
             stringAfter = JSONStringArray.get(listIndex + 1);
-
-            // System.out.println();
-            // System.out.println("before " + stringBefore);
-            // System.out.println("current " + stringInformation);
-            // System.out.println("after " + stringAfter);
             
-            //This means that it is a property of the object and not a new object or array
+            //This means that it is a "primitive" property of the object and not a new object or array
             if ( stringInformation.equals(":") && !stringAfter.equals("{") && !stringAfter.equals("[")  ) {
-                System.out.println("Found object property.");
-                System.out.println();
 
-                listIndex += 3;
-                //remove "" from strings so it can return the actual value
+                listIndex += 3; //Skip to the next : . 1 for the value, one for the comma, one for the next property value. The loop of the index will put it back to the next :
+            
                 JSONHashMap.put( stringBefore.replaceAll("[\"\']", ""),new SeerJSON(stringBefore.replaceAll("[\"\']", ""), stringAfter.replaceAll("[\"\']", ""), new SeerStringifiedJSON(stringAfter), determineType(stringAfter)) );
             
             }
-            //Boolean to check if this property is a new object
+            //Check to see if property is a new object.
             else if ( stringInformation.equals(":") && stringAfter.equals("{") ) {
-
-                System.out.println("Found object property that is an object.");
-                System.out.println();
     
                 strContainingObj = getContainerString(new ArrayList<String>(JSONStringArray.subList(listIndex + 1, JSONStringArray.size())));
                 SeerStringifiedJSON stringifiedContainer = new SeerStringifiedJSON( strContainingObj );
                 
-                //skip past what we just read in for the next go around by removing
-                listIndex += stringifiedContainer.getSeperatedJSON().size() + 2;
+                listIndex += stringifiedContainer.getSeperatedJSON().size() + 2; // +2 For removed braces
 
                 JSONHashMap.put(stringBefore.replaceAll("[\"\']", ""), new SeerJSON( stringBefore.replaceAll("[\"\']", ""), "{" + strContainingObj + "}", stringifiedContainer, ESeerType.OBJECT ) );
             
             }
-            //Boolean to check if this property is a new object
+            //Checks to see if the property is an array.
             else if ( stringInformation.equals(":") && stringAfter.equals("[") ) {
-                
-                System.out.println("Found object property that is an array.");
-                System.out.println();
 
                 strContainingObj = getContainerString(new ArrayList<String>(JSONStringArray.subList(listIndex + 1, JSONStringArray.size())));
                 SeerStringifiedJSON stringifiedContainer = new SeerStringifiedJSON( strContainingObj );
                 
-                //skip past what we just read in for the next go around by removing
-                listIndex += stringifiedContainer.getSeperatedJSON().size() + 2;
+                listIndex += stringifiedContainer.getSeperatedJSON().size() + 2; // +2 For removed braces
                 
                 JSONHashMap.put(stringBefore.replaceAll("[\"\']", ""), new SeerJSON( stringBefore.replaceAll("[\"\']", ""), "[" + strContainingObj + "]", stringifiedContainer, ESeerType.ARRAY ) );
 
@@ -105,9 +87,6 @@ public class SeerJSON {
         String strContainingObj = "";
 
         int ArrayIndex = 0;
-
-        System.out.println("Array contains values " + JSONStringArray); //this will include the , as its own index. Ignore on output.
-        System.out.println();
         
         for ( int listIndex = 0; listIndex < JSONStringArray.size(); ++listIndex ) {
 
@@ -125,19 +104,18 @@ public class SeerJSON {
                 strContainingObj = getContainerString(new ArrayList<String>(JSONStringArray.subList(listIndex, JSONStringArray.size())));
                 SeerStringifiedJSON stringifiedContainer = new SeerStringifiedJSON( strContainingObj );
                 
-                //skip past what we just read in for the next go around (+2 for the brackets that were removed.)
-                listIndex += stringifiedContainer.getSeperatedJSON().size() + 2;
+                listIndex += stringifiedContainer.getSeperatedJSON().size() + 2; // +2 For removed braces
 
                 JSONHashMap.put(Integer.toString(ArrayIndex), new SeerJSON( Integer.toString(ArrayIndex++), "{" + strContainingObj + "}", stringifiedContainer, ESeerType.OBJECT ) );
             
             }
+            //This is if it is an array of arrays. Must skip past the first index because it will always be [
             else if ( stringInformation.equals("[") && listIndex != 0) {
 
                 strContainingObj = getContainerString(new ArrayList<String>(JSONStringArray.subList(listIndex, JSONStringArray.size())));
                 SeerStringifiedJSON stringifiedContainer = new SeerStringifiedJSON( strContainingObj );
                 
-                //skip past what we just read in for the next go around by removing
-                listIndex += stringifiedContainer.getSeperatedJSON().size() + 2;
+                listIndex += stringifiedContainer.getSeperatedJSON().size() + 2; // +2 For removed braces
 
                 JSONHashMap.put(Integer.toString(ArrayIndex), new SeerJSON( Integer.toString(ArrayIndex++), "[" + strContainingObj + "]", stringifiedContainer, ESeerType.ARRAY ) );
 
