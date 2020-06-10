@@ -68,7 +68,7 @@ SeerJSON JSONObject = JSONString.getJSON();
 SeerJSON objectInArray = JSONObject.$(0).$(0);  //Selects Array at 0 index then the Object at index 0 in that Array
 ```
 The `.$("property")` call will return the underlying SeerJSON representation of the value back and have access to the methods that class provides. 
-Arrays - Can use either the Integer  zero (`0`) or the String zero (`"0"`)
+Arrays - Can use either the Int (`0`) or the String representation of a number (`"0"`)</br>
 Objects - Call the properties in String format (`"property"`)
 
 ##### Underlying Value as Type
