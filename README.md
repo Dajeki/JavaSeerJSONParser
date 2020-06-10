@@ -1,7 +1,7 @@
 
 <p align="center"> 
-	<img style="width:20%" src="https://i.imgur.com/0I4tcRT.png" alt="SeerJSON Logo">
-  # SeerJSON
+  <img height = "200" src="https://i.imgur.com/0I4tcRT.png" alt="SeerJSON Logo">
+  <h1 align="center">SeerJSON</h1>
 </p>
 
 Simple JSON parser for Java with intuitive value retreival.
