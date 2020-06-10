@@ -12,15 +12,17 @@ The language design of JAVA is not able to handle JSON natively from the lack of
 
 Git Command Line
 
+You may also download and use the Jar by clicking [[here!]][JARFile]<br/>
+The jar file is packaged only with the `SeerJSON` package name. So use `import SeerJSON.*` with the .jar added to your classpath.<br/>
+
 This will download the current version as source. The classes are available in `SeerJSON.SeerDataType` package
+and comes with an example of retrieving data from a JSON file.
 
 ```sh
 git clone https://github.com/Dajeki/JavaSeerJSONParser new_directory_name
 ```
 **note - the new directory name is optional. If left out will place it in current directory.* <br/>
 
-You may also download and use the Jar by clicking [[here!]][JARFile]<br/>
-The jar file is packaged only with the `SeerJSON` package name. So use `import SeerJSON.*` with the .jar added to your classpath.<br/>
 
 <br/>
 
