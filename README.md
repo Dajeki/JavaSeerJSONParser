@@ -46,8 +46,10 @@ git clone https://github.com/Dajeki/JavaSeerJSONParser new_directory_name
     }
   ]
 ]
-```
+``` 
+\
 
+  
 #### Creating Object
 
 ```java
@@ -59,8 +61,8 @@ SeerJSON JSONObject = JSONString.getJSON();
 `SeerJSON` is the type of object that is used to access the object using Seer JS object notation `.$("propertyName");`
 
 
+  
 #### Retrieving Information From SeerJSON
-
 ##### SeerJSON Object
 
 ```java
@@ -80,8 +82,8 @@ Java object type primitives like `Integer`,`Double`,`Boolean` and primitive type
 For example, a string can not be saved for an underlying double type.
 
 
+  
 #### Runtime Information of Object
-
 ##### Runtime Type of the Underlying Value
 
 ```java
@@ -100,10 +102,11 @@ JSONObject.toString();
 `toString()` has been overriden to return the string representation of the object to be used to create more objects or send as data.
 The SeerJSON object above produces the below output.
 <p align="center">
-		**Output** 
-		![toString](https://i.imgur.com/pdghdTq.png "toString")
+		<img src="https://i.imgur.com/pdghdTq.png" alt="toString"/>
 </p>
 
+
+  
 #### Pretty Print Formatting
 
 ```java
@@ -111,10 +114,11 @@ JSONObject.printObject();
 ```
 When invoked by any SeerJSON object, will print out the object in formatted JSON form to allow for easy observation of the underlying object. When run on something like a String, it will include the `" "` in the output to differenciate numbers from Strings that are numbers. 
 <p align="center"> 
-		**Output** 
 		<img style="width:40%" src="https://i.imgur.com/eIrLThY.png" alt="Prettified JSON Output">
 </p>
 
+
+  
 #### Sample Usage and Output
 This program is retreiving values from the above JSON Object as a single string.
 
@@ -145,7 +149,6 @@ System.out.println(objectInArray.$("value2"));
 System.out.println("-------------------------------------");
 ```
 <p align="center"> 
-	**Output** 
     <img style="width:40%" src="https://i.imgur.com/ua9jhTv.png" alt="Prettified JSON Output">
  </p>
 
