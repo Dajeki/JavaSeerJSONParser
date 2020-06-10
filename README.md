@@ -21,7 +21,7 @@ git clone https://github.com/Dajeki/JavaSeerJSONParser new_directory_name
 ## Usage Examples
   
 
-#### Example JSON for Examples
+#### JSON for Examples
 
 ```json
 [
