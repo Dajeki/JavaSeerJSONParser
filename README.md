@@ -47,6 +47,7 @@ git clone https://github.com/Dajeki/JavaSeerJSONParser new_directory_name
   ]
 ]
 ``` 
+<br/>
   
 #### Creating Object
 
@@ -101,7 +102,7 @@ JSONObject.toString();
 The SeerJSON object above produces the below output.
 <p align="center">
 		<img src="https://i.imgur.com/pdghdTq.png" alt="toString"/>
-</p> <br/><br/>
+</p> <br/>
 
 
   
@@ -113,7 +114,7 @@ JSONObject.printObject();
 When invoked by any SeerJSON object, will print out the object in formatted JSON form to allow for easy observation of the underlying object. When run on something like a String, it will include the `" "` in the output to differenciate numbers from Strings that are numbers. 
 <p align="center"> 
 		<img style="width:40%" src="https://i.imgur.com/eIrLThY.png" alt="Prettified JSON Output">
-</p><br/><br/>
+</p>
 
 
   
