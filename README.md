@@ -19,7 +19,10 @@ git clone https://github.com/Dajeki/JavaSeerJSONParser new_directory_name
 
 
 ## Usage Examples
-####Example JSON for Examples
+  
+
+#### Example JSON for Examples
+
 ```json
 [
   [
@@ -45,8 +48,8 @@ git clone https://github.com/Dajeki/JavaSeerJSONParser new_directory_name
 ]
 ```
 
-</br>
-####Creating Object
+#### Creating Object
+
 ```java
 SeerStringifiedJSON JSONString = new SeerStringifiedJSON( JSONFileAsString ); 
 SeerJSON JSONObject = JSONString.getJSON();
@@ -55,16 +58,20 @@ SeerJSON JSONObject = JSONString.getJSON();
 
 `SeerJSON` is the type of object that is used to access the object using Seer JS object notation `.$("propertyName");`
 
-</br>
-####Retrieving Information From SeerJSON
-#####SeerJSON Object
+
+#### Retrieving Information From SeerJSON
+
+##### SeerJSON Object
+
 ```java
 SeerJSON objectInArray = JSONObject.$(0).$(0);  //Selects Array at 0 index then the Object at index 0 in that Array
 ```
 The `.$("property")` call will return the underlying SeerJSON representation of the value back and have access to the methods that class provides. 
 Arrays - Can use either the Integer  zero (`0`) or the String zero (`"0"`)
 Objects - Call the properties in String format (`"property"`)
-#####Underlying Value as Type
+
+##### Underlying Value as Type
+
 ```java
 int objectInArray = JSONObject.$(0).$(1).$("value1").$();  //Selects the value 2 from the SeerJSON object
 ```
@@ -72,9 +79,11 @@ To return the value as the underlying type, you only need set it to a variable o
 Java object type primitives like `Integer`,`Double`,`Boolean` and primitive types like `int`, `double`, and `boolean` are accepted as valid value stores but must abide to the type of the underlying value. 
 For example, a string can not be saved for an underlying double type.
 
-</br>
-####Runtime Information of Object
-#####Runtime Type of the Underlying Value
+
+#### Runtime Information of Object
+
+##### Runtime Type of the Underlying Value
+
 ```java
 JSONObject.getType();
 ```
@@ -83,7 +92,8 @@ JSONObject.getType();
 	<img src="https://i.imgur.com/GnmEnxK.png" alt="Type of underlying value">
 </p>
 
-#####String Representation of the JSON
+##### String Representation of the JSON
+
 ```java
 JSONObject.toString();
 ```
@@ -94,8 +104,8 @@ The SeerJSON object above produces the below output.
 		![toString](https://i.imgur.com/pdghdTq.png "toString")
 </p>
 
-</br>
-####Pretty Print Formatting
+#### Pretty Print Formatting
+
 ```java
 JSONObject.printObject();
 ```
@@ -105,9 +115,9 @@ When invoked by any SeerJSON object, will print out the object in formatted JSON
 		<img style="width:40%" src="https://i.imgur.com/eIrLThY.png" alt="Prettified JSON Output">
 </p>
 
-</br>
-####Sample Usage and Output
+#### Sample Usage and Output
 This program is retreiving values from the above JSON Object as a single string.
+
 ```java
 SeerStringifiedJSON JSONString = new SeerStringifiedJSON(JSONFileAsString); 
 SeerJSON JSONObject = JSONString.getJSON();
