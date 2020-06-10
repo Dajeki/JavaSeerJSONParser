@@ -3,6 +3,7 @@ Simple JSON parser for Java with intuitive value retreival.
 
 [![MIT Licensing](https://img.shields.io/github/license/Dajeki/JavaSeerJSONParser)](https://img.shields.io/github/license/Dajeki/JavaSeerJSONParser)
 [![IssueTracker](https://img.shields.io/github/issues/Dajeki/JavaSeerJSONParser "IssueTracker")](https://img.shields.io/github/issues/Dajeki/JavaSeerJSONParser "IssueTracker")
+[![Version](https://img.shields.io/github/v/release/Dajeki/JavaSeerJSONParser "IssueTracker")](https://img.shields.io/github/issues/Dajeki/JavaSeerJSONParser "Version")
 
 The language design of JAVA is not able to handle JSON natively from the lack of dynamically created objects. This simple library allows you to access values from JSON strings intuitively and in as close as possible to represent dot `.property` notation by instead using `.$("property")`.
 
@@ -11,11 +12,17 @@ The language design of JAVA is not able to handle JSON natively from the lack of
 
 Git Command Line
 
+This will download the current version as source. The classes are available in `SeerJSON.SeerDataType` package
+
 ```sh
 git clone https://github.com/Dajeki/JavaSeerJSONParser new_directory_name
 ```
-**note - the new directory name is optional. If left out will place it in current directory.*
-</br>
+**note - the new directory name is optional. If left out will place it in current directory.* <br/>
+
+You may also download and use the Jar by clicking [[here!]][JARFile]<br/>
+The jar file is packaged only with the `SeerJSON` package name. So use `import SeerJSON.*` with the .jar added to your classpath.<br/>
+
+<br/>
 
 
 ## Usage Examples
@@ -169,3 +176,6 @@ Distributed under the `MIT` license. See [LICENSE](https://github.com/Dajeki/Jav
 ## Contributing
 
 Comming Soon!
+
+
+[JARFile]: https://github.com/Dajeki/JavaSeerJSONParser/releases/download/0.1.0/SeerJSON-0.1.0.jar "JarFile"
