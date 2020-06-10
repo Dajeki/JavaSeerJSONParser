@@ -47,8 +47,6 @@ git clone https://github.com/Dajeki/JavaSeerJSONParser new_directory_name
   ]
 ]
 ``` 
-\
-
   
 #### Creating Object
 
@@ -58,7 +56,7 @@ SeerJSON JSONObject = JSONString.getJSON();
 ```
 `SeerStringifiedJSON` is how JSON Objects are created. You must use the constructor with a string version of valid JSON. Here you have basic functionality like pretty printing back the JSON like in the screenshot example above.
 
-`SeerJSON` is the type of object that is used to access the object using Seer JS object notation `.$("propertyName");`
+`SeerJSON` is the type of object that is used to access the object using Seer JS object notation `.$("propertyName");`<br/><br/><br/>
 
 
   
@@ -79,7 +77,7 @@ int objectInArray = JSONObject.$(0).$(1).$("value1").$();  //Selects the value 2
 ```
 To return the value as the underlying type, you only need set it to a variable of an appropriate type without an argument `.$()`.
 Java object type primitives like `Integer`,`Double`,`Boolean` and primitive types like `int`, `double`, and `boolean` are accepted as valid value stores but must abide to the type of the underlying value. 
-For example, a string can not be saved for an underlying double type.
+For example, a string can not be saved for an underlying double type. <br/><br/><br/>
 
 
   
@@ -103,7 +101,7 @@ JSONObject.toString();
 The SeerJSON object above produces the below output.
 <p align="center">
 		<img src="https://i.imgur.com/pdghdTq.png" alt="toString"/>
-</p>
+</p> <br/><br/><br/>
 
 
   
@@ -115,7 +113,7 @@ JSONObject.printObject();
 When invoked by any SeerJSON object, will print out the object in formatted JSON form to allow for easy observation of the underlying object. When run on something like a String, it will include the `" "` in the output to differenciate numbers from Strings that are numbers. 
 <p align="center"> 
 		<img style="width:40%" src="https://i.imgur.com/eIrLThY.png" alt="Prettified JSON Output">
-</p>
+</p><br/><br/><br/>
 
 
   
