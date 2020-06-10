@@ -170,7 +170,7 @@ System.out.println("-------------------------------------");
 
 Zachary A. K – zkdajeki@gmail.com
 
-Distributed under the `MIT` license. See [LICENSE](https://github.com/Dajeki/JavaSeerJSONParser/blob/master/LICENSE) for more information.
+Distributed under the `Apache License 2.0` license. See [LICENSE](https://github.com/Dajeki/JavaSeerJSONParser/blob/master/LICENSE) for more information.
 
 
 ## Contributing
