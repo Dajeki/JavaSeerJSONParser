@@ -1,4 +1,9 @@
-# SeerJSON
+
+<p align="center"> 
+	<img src="https://i.imgur.com/0I4tcRT.png" alt="SeerJSON Logo">
+  # SeerJSON
+</p>
+
 Simple JSON parser for Java with intuitive value retreival.
 
 [![MIT Licensing](https://img.shields.io/github/license/Dajeki/JavaSeerJSONParser)](https://img.shields.io/github/license/Dajeki/JavaSeerJSONParser)
