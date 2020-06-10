@@ -1,6 +1,6 @@
 
 <p align="center"> 
-	<img src="https://i.imgur.com/0I4tcRT.png" alt="SeerJSON Logo">
+	<img style="width:20%" src="https://i.imgur.com/0I4tcRT.png" alt="SeerJSON Logo">
   # SeerJSON
 </p>
 
