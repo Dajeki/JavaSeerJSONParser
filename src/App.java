@@ -43,31 +43,28 @@ public class App {
 		//Prints the object formatted
 		JSONObject.printObject();
 		System.out.println("\n");
-
+		
 		//Objects inside main array JSON object
 		SeerJSON objectInArray = JSONObject.$(0).$(0);
 		System.out.println(objectInArray.$("value1").getType());
 		System.out.println(objectInArray.$("value1"));
 		System.out.println(objectInArray.$("value2"));
-		System.out.println("\n");
-
+		System.out.println("-------------------------------------");
 		objectInArray = JSONObject.$(0).$(1);
 		System.out.println(objectInArray.$("value1").getType());
 		System.out.println(objectInArray.$("value1"));
 		System.out.println(objectInArray.$("value2"));
-		System.out.println("\n");
-
+		System.out.println("-------------------------------------");
 		objectInArray = JSONObject.$(1).$(0);
 		System.out.println(objectInArray.$("value1").getType());
 		System.out.println(objectInArray.$("value1"));
 		System.out.println(objectInArray.$("value2"));
-		System.out.println("\n");
-
+		System.out.println("-------------------------------------");
 		objectInArray = JSONObject.$(1).$(1);
 		System.out.println(objectInArray.$("value1").getType());
 		System.out.println(objectInArray.$("value1"));
 		System.out.println(objectInArray.$("value2"));
-		System.out.println("\n");
+		System.out.println("-------------------------------------");
 
 
     }
