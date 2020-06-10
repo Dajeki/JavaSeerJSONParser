@@ -3,7 +3,7 @@ Simple JSON parser for Java with intuitive value retreival.
 
 [![MIT Licensing](https://img.shields.io/github/license/Dajeki/JavaSeerJSONParser)](https://img.shields.io/github/license/Dajeki/JavaSeerJSONParser)
 [![IssueTracker](https://img.shields.io/github/issues/Dajeki/JavaSeerJSONParser "IssueTracker")](https://img.shields.io/github/issues/Dajeki/JavaSeerJSONParser "IssueTracker")
-[![Version](https://img.shields.io/github/v/tag/Dajeki/JavaSeerJSONParser "Version")](https://img.shields.io/github/v/tag/Dajeki/JavaSeerJSONParser "Version")
+[![Version](https://img.shields.io/github/v/tag/Dajeki/JavaSeerJSONParser?label=Version "Version")](https://img.shields.io/github/v/tag/Dajeki/JavaSeerJSONParser?label=Version "Version")
 
 The language design of JAVA is not able to handle JSON natively from the lack of dynamically created objects. This simple library allows you to access values from JSON strings intuitively and in as close as possible to represent dot `.property` notation by instead using `.$("property")`.
 
