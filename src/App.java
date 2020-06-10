@@ -1,11 +1,10 @@
-import SeerJSON.SeerDataType.SeerJSON;
-import SeerJSON.SeerDataType.SeerStringifiedJSON;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 import java.util.Scanner;
+
+import SeerJSON.SeerDataType.*;
 
 public class App {
     
