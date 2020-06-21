@@ -184,23 +184,21 @@ public class SeerJSON {
 
     @SuppressWarnings("unchecked")
     public <ReturnType> ReturnType $() {
-        if (valueType == ESeerType.INTEGER) {
-            return (ReturnType)Integer.valueOf(Integer.parseInt(propertyValue));
-        }
-        else if (valueType == ESeerType.DOUBLE) {
-            return (ReturnType)Double.valueOf(Double.parseDouble(propertyValue));
-        }
-        else if (valueType == ESeerType.BOOLEAN) {
-            return (ReturnType)Boolean.valueOf(Boolean.parseBoolean(propertyValue));
-        }
-        else if (valueType == ESeerType.STRING) {
-            return (ReturnType)interpretEscapeCharacters(propertyValue);
-        }
-        else if (valueType == ESeerType.OBJECT || valueType == ESeerType.ARRAY) {
-            return (ReturnType)this;
-        }
-        else {
-            return null;
+
+        switch (valueType){
+            case STRING:
+                return (ReturnType)interpretEscapeCharacters(propertyValue);
+            case INTEGER:
+                return (ReturnType)Integer.valueOf(Integer.parseInt(propertyValue));
+            case DOUBLE:
+                return (ReturnType)Double.valueOf(Double.parseDouble(propertyValue));
+            case BOOLEAN:
+                return (ReturnType)Boolean.valueOf(Boolean.parseBoolean(propertyValue));
+            case OBJECT:
+            case ARRAY:
+                return (ReturnType)this;
+            default:
+                return null;
         }
     }
 

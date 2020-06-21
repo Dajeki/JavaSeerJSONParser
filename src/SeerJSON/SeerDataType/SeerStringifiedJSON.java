@@ -155,9 +155,8 @@ public class SeerStringifiedJSON {
         if( backToRegex.charAt(0) == '{'){
             return new SeerJSON("Base", backToRegex , this, ESeerType.OBJECT);
         }
-        else {
-            return new SeerJSON("Base", backToRegex , this, ESeerType.ARRAY);
-        }
-        
+
+        return new SeerJSON("Base", backToRegex , this, ESeerType.ARRAY);
+           
     }
 }

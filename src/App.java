@@ -65,7 +65,5 @@ public class App {
 		System.out.println(objectInArray.$("value1"));
 		System.out.println(objectInArray.$("value2"));
 		System.out.println("-------------------------------------");
-
-
     }
 }
