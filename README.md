@@ -4,7 +4,7 @@
   <h1 align="center">SeerJSON</h1>
 </p>
 
-Simple JSON parser for Java with intuitive value retreival.
+Simple JSON parser for Java with intuitive value retrieval.
 
 [![MIT Licensing](https://img.shields.io/github/license/Dajeki/JavaSeerJSONParser)](https://img.shields.io/github/license/Dajeki/JavaSeerJSONParser)
 [![IssueTracker](https://img.shields.io/github/issues/Dajeki/JavaSeerJSONParser "IssueTracker")](https://img.shields.io/github/issues/Dajeki/JavaSeerJSONParser "IssueTracker")
